@@ -1,0 +1,47 @@
+.promotion-box{
+    @include section-base(35px);
+    background-image: linear-gradient(to bottom, #EEE8E6 0% , #fff 5%);
+    h1{
+        color: $secondaryColor;
+        font-size: 2rem;
+        margin: 60px 0 0 0;
+    }
+    p{
+        margin: 0;
+        a{
+            &:first-child{
+                color: $textColor;
+            }
+            &:last-child{
+                color: $headingColor;
+            }
+        }
+    }
+    .promotion-wrapper{
+        position: relative;
+        top: -25px;
+        margin-bottom: 70px;
+        $promotions:(top:'../images/promotion01.jpg',bottom:'../images/promotion02.jpg');
+        @each $key,$value in $promotions{
+            .promotion-#{$key}{
+                background-image: url($value);
+                height: 529px;
+                position: relative;
+                margin-top: 65px;
+                    .promotion-content{
+                        .promotion-content-01{
+                            @include promotionContent($primaryColor,#fff,#fff,#fff,-40px)
+                        }
+                    }
+                    .promotion-content{
+                        .promotion-content-02{
+                            @include promotionContent(#fff,$primaryColor,$headingColor,$primaryColor,-80px)
+                        }
+                    }
+                }
+            }
+    }
+    .promotion-text{
+        @include text;
+    }
+}

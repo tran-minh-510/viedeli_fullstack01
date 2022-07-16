@@ -1,0 +1,22 @@
+.signup{
+    @include section-base(35px);
+    background-image: linear-gradient(to bottom, #EEE8E6 0% , #fff 20%);
+    .signup-sucsess{
+        margin: 60px 0;
+        text-align: center;
+        h1{
+            font-size: 2.5rem;
+            font-weight: 100;
+            margin: 0;
+        }
+        img{
+            &:last-of-type{
+                margin: 25px 0;
+            }
+        }
+        p{
+            margin: 0;
+            color: $headingColor;
+        }
+    }
+}

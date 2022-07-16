@@ -1,0 +1,101 @@
+.tidings-box{
+    @include section-base(35px);
+    background-image: linear-gradient(to bottom, #EEE8E6 0% , #fff 5%);
+    h1{
+        color: $secondaryColor;
+        font-size: 2rem;
+        margin: 60px 0 0 0;
+    }
+    p{
+        margin: 0;
+        a{
+            &:first-child{
+                color: $textColor;
+            }
+            &:last-child{
+                color: $headingColor;
+            }
+        }
+    }
+    .tidings-hot-big{
+        @include section-base(40px);
+        .tidings-hot-big__img{
+            width: 100%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .tidings-hot-big__content{
+            padding: 65px 25px;
+            span{
+                color: #80765f;
+                font-size: 0.92rem;
+                margin: 10px 0;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+    
+            h2{
+                font-size: 1.9rem;
+                font-weight: bold;
+            }
+    
+            p{
+                color: #7f7f7f;
+            }
+    
+        }
+    }
+    .tidings-hot-list{
+        @include section-base(20px);
+        .tidings-hot-list_wrapper{
+            @include section-base(10px);
+            .tidings-hot-list__img{
+                width: 100%;
+                height: 280px;
+                img{
+                    @extend .tidings-hot-list__img
+                }
+            }
+            .tidings-hot-list__content{
+                padding-top: 22px;
+                span{
+                    color: $primaryColor;
+                    font-size: 0.92rem;
+                    margin: 10px 0;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+        
+                h2{
+                    font-size: 1.42rem;
+                    font-weight: bold;
+                }
+        
+                p{
+                    color: #7f7f7f;
+                }
+            }
+        }
+    }
+    .btn-number{
+        margin: 18px 0 -10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .btn-box{
+            @extend .btn-number;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            color: $primaryColorOpacity;
+            &.active{
+                background-color: $primaryColorOpacity;
+                color: #fff;
+            }
+        }
+    }
+}

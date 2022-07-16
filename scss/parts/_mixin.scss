@@ -1,0 +1,80 @@
+@mixin vertical-middle($top: 50%) {
+    position: absolute;
+    top: $top;
+    transform: translateY(-50%);
+}
+
+@mixin arrow-button($background, $color: $textColor, $border: none) {
+    background: $background;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: $border;
+    color: $color;
+}
+
+@mixin section-base($space) {
+    padding: $space 0;
+}
+
+@mixin center($width){
+    max-width: $width;
+    margin: 0 auto;
+}
+
+@mixin text{
+    text-align: center;
+    padding-top: 1px;
+    margin-bottom: -25px;
+    h2{
+        font-size: 3rem;
+        font-weight: 100;
+    }
+    p{
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $secondaryColor;
+    }
+}
+
+@mixin promotionContent($backGround,$boder,$h2Color,$colorP,$bottom){
+    position: absolute;
+    width: 378px;
+    height: 346px;
+    background-color: $backGround;
+    top: 100px;
+    right: 70px;
+    padding: 50px 40px;
+    span{
+        padding: 9px 18px 5px;
+        border: 2px solid $boder;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: $primaryColor;
+        cursor: pointer;
+    }
+    h2{
+        margin-top: 40px;
+        color: $h2Color;
+        font-size: 2.2rem;
+        font-weight: 400;
+        line-height: initial;
+    }
+    p{
+        color: $colorP;
+        position: relative;
+        bottom: $bottom;
+    }
+}
+
+@mixin reviewNavChild($right) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: $right;
+    border-radius: 10px;
+    background-color: $primaryColorOpacity;
+}

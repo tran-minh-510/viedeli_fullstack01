@@ -1,0 +1,147 @@
+.introduce-box{
+    @include section-base(35px);
+    background-image: linear-gradient(to bottom, #EEE8E6 0% , #fff 5%);
+    h1{
+        color: $secondaryColor;
+        font-size: 2rem;
+        margin: 60px 0 0 0;
+    }
+    p{
+        margin: 0;
+        a{
+            &:first-child{
+                color: $textColor;
+            }
+            &:last-child{
+                color: $headingColor;
+            }
+        }
+    }
+    .introduce-meaning{
+        margin-top: 20px;
+        .introduce-meaning__text{
+            height: 100%;
+            color: $secondaryColor;
+            font-size: 1.1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .introduce-meaning__img{
+            height: 100%;
+            img{
+                height: 100%;
+            }
+        }
+    }
+    .double-comma{
+        margin: 80px 0;
+        text-align: center;
+        img{
+            margin-bottom: 40px;
+            opacity: 0.2;
+        }
+        h2{
+            font-size: 3rem;
+            font-weight: 100;
+            line-height: 40px;
+            color: $secondaryColor;
+        }
+    }
+    .introduce__list-img{
+        img{
+            height: 100%;
+        }
+    }
+    .about-us{
+        text-align: center;
+        padding: 130px 0;
+        h2{
+            font-size: 3rem;
+            font-weight: 100;
+        }
+        p{
+            color: $secondaryColor;
+            font-size: 1.2rem;
+        }
+    }
+    .our-story{
+        position: relative;
+        background: url('../images/introduce-banner.jpg') no-repeat;
+        width: 100%;
+        height: 730px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+        .our-story__content{
+            position: absolute;
+            width: 630px;
+            height: 490px;
+            background-color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2{
+                font-size: 3rem;
+                font-weight: 100;
+                line-height: 40px;
+                color: $secondaryColor;
+                &:last-of-type{
+                    margin-bottom: 50px;
+                }
+            }
+            p{
+                color: $secondaryColor;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .mission-vision{
+        text-align: center;
+        margin-bottom: 40px;
+        h2{
+            font-size: 3rem;
+            font-weight: 100;
+            line-height: 40px;
+            color: $secondaryColor;
+            margin-bottom: 30px;
+        }
+        p{
+            color: $secondaryColor;
+            font-size: 1.2rem;
+        }
+    }
+    .introduce-info{
+        margin-top: 70px;
+        margin-bottom: 80px;
+        .introduce-info__background{
+            position: relative;
+            background: url('../images/introduce07.png') no-repeat;
+            width: 100%;
+            height: 393px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .introduce-info__content{
+                position: absolute;
+                text-align: center;
+                top: 100px;
+                h2{
+                    font-size: 1.4rem;
+                    text-transform: uppercase;
+                    margin: 10px 0;
+                    margin: 18px;
+                }
+                p{
+                    color: $secondaryColor;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .introduce-text{
+        @include text;
+    }
+}

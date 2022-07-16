@@ -1,0 +1,34 @@
+@import 'parts/variable';
+@import 'parts/reset';
+@import 'parts/fonts';
+@import 'parts/base';
+@import 'parts/mixin';
+
+//Import Components
+@import 'components/header';
+@import 'components/footer';
+
+//Import page
+@import 'home/banner';
+@import 'home/whyus';
+@import 'home/products';
+@import 'home/location';
+@import 'home/news';
+@import 'home/partners';
+@import 'home/contact';
+
+@import 'tidings/tidings';
+
+@import 'yield/yield';
+
+@import 'promotion/promotion';
+
+@import 'introduce/introduce';
+
+@import 'signup/signup';
+
+@import 'service/service';
+
+@import 'detail-article/detail-article';
+
+@import 'detail-location/detail-location';

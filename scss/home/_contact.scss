@@ -1,0 +1,138 @@
+.contact-box{
+    @include section-base(30px);
+
+    .contact-box__image{
+        height: 100%;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover; //Giống crop ảnh (Khắc phục tình trạng méo ảnh)
+        }
+    }
+
+    .contact-box__form{
+        @extend .contact-box__image;
+        background: $primaryColor;
+        padding: 50px;
+        color: #fff;
+
+        @media screen and (max-width: 1200px) {
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 992px) {
+            padding: 15px;
+        }
+        
+        h2{
+            text-align: center;
+            color: #fff;
+            font-weight: 100;
+            font-size: 2.78rem;
+            margin-bottom: 20px;
+            @media screen and (max-width: 992px) {
+                font-size: 2rem;
+            }
+        }
+
+        .contact-box--item{
+
+            margin-bottom: 20px;
+            position: relative;
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 12px;
+                left: 15px;
+                display: block;
+                width: 20px;
+                height: 20px;
+                background-size: 100% 100% !important;
+            }
+            
+            //map
+            //(key: value, key:value)
+
+            //array
+            //(a, b, c), (a1, b1, c1) 
+            $icons: (user: 'user-icon.png', email: 'email-icon.png', phone: 'phone-icon.png');
+
+            @each $name, $image in $icons {
+                &.#{$name}{
+                    &::before{
+                       $path:  '../images/'+$image;
+                       background: url($path) no-repeat;
+                
+                    }
+                }
+            }
+
+            input{
+                width: 100%;
+                padding: 15px 15px 15px 45px;
+                text-transform: uppercase;
+                color: #3a3a3a;
+                font-size: 0.85rem;
+
+                &::placeholder{
+                    color: #3a3a3a;
+                }
+            }
+        }
+
+        .btn{
+            &:hover{
+                background: $secondaryColor;
+            }
+        }
+
+        .contact-box--hotline{
+            display: flex;
+            flex-wrap: wrap;
+
+            @media screen and (max-width: 768px) {
+                justify-content: flex-end;
+            }
+
+            &::before{
+                content: '';
+                display: block;
+                width: 32px;
+                height: 32px;
+                background: url('../images/hotline-icon-contact.png') no-repeat;
+                margin-right: 10px;
+                position: relative;
+                top: 5px;
+            }
+
+            span{
+                display: block;
+                color: #fff;
+
+                &:first-child{
+                    font-size: 0.93rem;
+                    
+                    text-transform: uppercase;
+                }
+
+                &:last-child{
+                    
+                    font-size: 1.43rem;
+                    font-weight: bold;
+
+                    @media screen and (max-width: 992px) {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-box--order{
+        @media screen and (max-width: 991px) {
+            order: 1;
+        }
+    }
+}
